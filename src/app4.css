@@ -1,0 +1,17 @@
+@keyframes change2{
+    from{
+        background: pink;
+    }
+    to{
+        background: aqua;
+    }
+}
+#app4 .circle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid pink;
+}
+#app4 .circle.active{
+    animation: change2 1s infinite alternate ease-in-out;
+  }

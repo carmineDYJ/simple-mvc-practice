@@ -1,0 +1,92 @@
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex;
+    flex-wrap: wrap;
+}
+body > .page > section {
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid aqua;
+}
+*{margin: 0;padding: 0;}
+*, *::before, *::before{box-sizing: border-box;}
+ol,ul{list-style: none;}
+#app2 .tab-bar{
+    display: flex;
+}
+#app2 .tab-bar > li{
+    border: 1px solid pink;
+    width: 50%;
+}
+#app2 .tab-bar > li.selected{
+    background: black;
+    color: white;
+}
+#app2 .tab-content > li {
+    display: none;
+  }
+  #app2 .tab-content > li.active {
+    display: block;
+  }
+
+#app3 .square{
+    border: 1px solid pink;
+    margin-top: 10vw;
+    margin-left: 10vh;
+    width: 10vw;
+    height: 10vw;
+}
+#app3 .square.activate{
+    animation: change 1s linear forwards;
+}
+#app3 .square.deactivate{
+    animation: changeBack 1s linear forwards;
+}
+@keyframes change{
+    0%{
+        transform: none;
+    }
+    50%{
+        border-radius: 25%;
+        transform: translateX(10vw);
+    }
+    100%{
+        border-radius: 50%;
+        transform: translateX(20vw);
+    }
+}
+@keyframes changeBack{
+    0%{
+        border-radius: 50%;
+        transform: translateX(20vw)
+    }
+    50%{
+        border-radius: 25%;
+        transform: translateX(10vw);
+    }
+    100%{
+        border-radius: 0;
+        transform: none;
+    }
+}
+@keyframes change2{
+    from{
+        background: pink;
+    }
+    to{
+        background: aqua;
+    }
+}
+#app4 .circle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid pink;
+}
+#app4 .circle.active{
+    animation: change2 1s infinite alternate ease-in-out;
+  }
+
+/*# sourceMappingURL=main.f16df046.css.map */
